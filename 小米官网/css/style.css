@@ -1,0 +1,604 @@
+/*公共样式*/
+*{
+    margin:0;
+    padding:0;
+}
+ul,ol{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+img{
+    border:0;
+}
+.wrapper{/*高度不固定，不能加高度*/
+    width: 1226px;
+    margin: 0 auto;/*居中*/
+
+}
+/*banner开始*/
+.banner{
+    height:120px;
+    background: url("../img/banner.jpg") no-repeat 50% 50%;/*背景图片用img标签得算左右间距让图片居中 而背景图片设置50% 50%水平方向居中，垂直方向也居中
+                                                               但设计轮波图用背景图片不能产生动画效果只能用img标签*/
+}
+.banner a{
+    display:block;/*a是行级元素不能设置宽高得变为块级元素*/
+    width:100%;
+    height:100%;
+}
+/*banner结束*/
+/*nav开始*/
+.nav{
+    height:40px;
+    background:#333333;
+}
+/*解决空间释放元素塌陷问题（高度为0）*/
+.main-menu{
+    overflow:hidden;
+    float:left;
+}
+/*解决空间释放元素塌陷问题*/
+.nav li{
+    float:left;
+    height: 40px;
+    line-height:40px;
+
+}
+
+.nav a{
+    color: #b0b0b0;
+    font-size: 12px;
+}
+.nav a:hover{
+    color:#ffffff;
+}
+.nav .sep{
+    margin:0 6px;
+    color: #424242;
+}
+.user-info{
+    float:right;
+}
+.cart{
+    width:120px;
+    position:relative;
+    text-align:center;
+
+}
+.cart:hover .cart-box {
+    display:block;
+    animation:show 0.5s ease-out forwards;
+}
+@keyframes show {
+    100%{
+        height:85px;
+    }
+}
+
+
+.cart a{
+    height:100%;
+    width:100%;
+    display: block;
+    background: #424242;
+}
+.cart a:hover{
+    background:#ffffff;
+    color:#ff6700;
+
+}
+.cart-box{
+    width: 316px;
+    height: 0px;
+    padding-top: 15px;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    border: 1px solid #e0e0e0 \9;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    display: none;
+    z-index:1;
+}
+/*.icon-cart{*/
+    /*font-size:50px;*/
+/*}*/
+
+/*nav结束*/
+
+/*header 开始*/
+.header{
+    height:100px;
+    position:relative;
+
+}
+.header-logo{
+    width:55px;
+    height:55px;
+    margin-top:22px;
+    background: url("../img/mi-logo.png") center center no-repeat #ff6700;
+    float: left;
+}
+.header-menu{
+    float: left;
+    margin-left: 185px;
+    height: 100px;
+    line-height: 100px;
+}
+.header-menu .menu-item{
+    float:left;
+    padding:0 10px;
+
+}
+.header-menu .menu-item:hover .sub-menu{
+    display: block;
+    animation: slide 0.5s ease-in forwards;
+}
+@keyframes slide {
+    100%{
+        height:226px;
+    }
+}
+.header-menu .menu-item a{
+    color:rgb(51, 51, 51);
+}
+.header-menu .menu-item a:hover{
+    color:#ff6700;
+}
+.sub-menu{
+    height: 0px;
+    width: 100%;
+    background: #fff;
+    border-top:1px solid #e0e0e0;
+    position: absolute;
+    left:0;
+    top:100px;
+    overflow:hidden;
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15);
+    display: none;
+    z-index: 2;
+}
+.sub-menu ul{
+    width:1224px;
+    overflow:hidden;
+    margin:0 auto;
+}
+.sub-menu li{
+    width: 204px;
+    height: 201px;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+.flags {
+    height: 17px;
+    line-height: 17px;
+    margin-bottom: 17px;
+}
+.flags span {
+    border:1px solid #ff6700;
+    color:#ff6700;
+    font-size:12px;
+    padding: 1px 14px;
+}
+.p-img {
+    height: 110px;
+    display: block;
+    margin-bottom: 12px;
+}
+.p-title {
+    color: #333;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+}
+.p-price {
+    height: 20px;
+    line-height: 20px;
+    color: #ff6700;
+    font-size: 12px;
+}
+.flags2{
+    height: 17px;
+    line-height: 17px;
+    margin-bottom: 17px;
+}
+.flags2 span {
+    border:1px solid #ff6700;
+    color:#ff6700;
+    font-size:12px;
+    padding: 1px 14px;
+}
+.p-img2 {
+    height: 110px;
+    display: block;
+    margin-bottom: 12px;
+}
+.p-title2 {
+    color: #333;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+}
+.p-line{
+    width:1px;
+    height:100px;
+    right:0px;
+    top:36px;
+    background:#e0e0e0;
+    position: absolute;
+
+}
+.search{
+    width:296px;
+    height:50px;
+    float:right;
+    /*background:#000000;*/
+    margin-top:20px;
+    position: relative;
+}
+.search-txt{
+    width:222px;
+    height:48px;
+    border:1px solid #e0e0e0;
+    outline:none;
+    padding:0 10px;
+    float:left;
+    cursor:auto;
+   /*// position: relative;*/
+}
+.search-btn{
+    width:52px;
+    height:50px;
+    background:transparent;/*背景透明*/
+    border:1px solid  #e0e0e0;
+    border-left:0;
+    float:left;
+    position:relative;
+    cursor:pointer;/*变手状*/
+    outline: none;/*框的周围颜色消失*/
+    z-index: 1;
+}
+.search-btn:hover+i{/*相邻选择器只能往后找，当点到按钮时同时让图标的颜色和背景颜色变了*/
+    color:#fff;
+    background:#ff6700;
+}
+/*.search a{*/
+    /*display:block;*/
+    /*width:100%;*/
+    /*height:100%;*/
+/*}*/
+.icon-search{
+    position:absolute;
+    right:0;
+    top:0;
+    width:52px;
+    height:50px;
+    display:block;
+    line-height:50px;
+    text-align:center;
+
+}
+/*header 结束*/
+
+/*轮播图开始*/
+.slide{
+    position:relative ;
+    height: 460px;
+}
+.slide-box{
+    position: relative;
+}
+.img-box img{
+    width: 1226px;
+    height: 460pX;
+    position: absolute;
+    top: 0;
+    left:  0;
+
+}
+.prev-btn,.next-btn{
+    width:40px;
+    height: 70px;
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    color: #757575;
+    font-size: 40px;
+    line-height: 70px;
+    text-align:center ;
+    border-radius: 4px;/*边框4角变圆*/
+}
+.next-btn{
+    right: 0;
+}
+.prev-btn{
+    left: 234px;
+}
+.prev-btn:hover,.next-btn:hover{
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+}
+.btns li{
+    width: 6px;
+    height: 6px;
+    background: #232429;
+    border:2px solid #65666b;
+    float: left;
+    margin-right: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.btns li:hover{
+    background: #898a8e;
+    border:2px solid #4f4e56;
+}
+.btns{
+    width: 128px;
+    position: absolute;
+    right: 0px;
+    bottom:20px;
+}
+.list{
+    position: absolute;
+    left:0px;
+    top: 0px;
+    z-index: 1;
+    background: rgba(0,0,0,0.6) ;
+    padding: 20px 0;
+    width: 234px;
+
+ }
+.list-item>a{
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    padding-left: 30px;
+    color: #fff ;
+    font-size: 14px ;
+}
+.list-item>a:hover{
+    background: #ff6700;
+}
+.list-item:hover .sub-list{
+    display: block;
+}
+.icon-arrow{
+    float: right;
+    margin-right: 15px;
+}
+
+.sub-list{
+    background: #ffffff;
+    position: absolute;
+    top:0;
+    left: 234px;
+    height: 100%;
+    display: none;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.18);
+    border-top: 1px solid #e0e0e0;
+}
+.sub-list-3{
+    width: 795px ;
+}
+.sub-list ul{
+    width: 265px;
+    float: left;
+    height: 100%;
+}
+.sub-list li{
+
+    overflow: hidden;
+    padding: 18px 15px 18px 20px;
+}
+.sub-list a{
+    float: left;
+}
+.list-img-box{
+    width: 168px;
+}
+.list-img-box:hover .list-title{
+    color: #ff6700;
+}
+.list-img{
+    vertical-align: middle;
+}
+.list-title{
+    color: #333333;
+    font-size: 14px;
+
+}
+.sub-list a.buy-btn{
+    float: right;
+    width: 58px;
+    height: 22px;
+    border: 1px solid #ff6700;
+    color: #ff6700;
+    font-size: 12px;
+    text-align: center;
+    line-height: 22px;
+    margin-top: 10px;
+}
+/*轮播图结束*/
+
+.channel-box{
+    margin-top: 14px;
+    /*overflow:hidden;*/
+    margin-bottom: 24px;
+    height: 170px;
+}
+.channel-list{
+    width: 234px;
+    height: 170px;
+    background: #5f5750;
+    float: left;
+}
+.channel-list ul{
+    overflow: hidden;
+    padding: 3px 3px 0;
+}
+.channel-list li{
+    width: 76px;
+    height: 82px;
+    float: left;
+    position: relative;
+}
+.channel-list i{
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 18px;
+}
+.channel-list span{
+    display: block;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+}
+.line-right{
+    position: absolute;
+    right: 0px;
+    top: 6px;
+    width: 1px;
+    height: 70px;
+    background: #665e57;
+}
+.line-bottom{
+    position: absolute;
+    width: 64px;
+    height: 1px ;
+    background: #665e57;
+    right: 6px;
+    bottom: -1px;
+
+}
+.box-one:hover span,.box-one:hover i{
+    color: #fffcf9;
+
+}
+/*.channel-list li.right::after{*/
+    /*content: "";*/
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*top: 9px;*/
+    /*width: 1px;*/
+    /*height: 64px;*/
+    /*background: #665e57;*/
+/*}*/
+/*.channel-list li.line-bottom::before{*/
+    /*content: "";*/
+    /*width: 64px;*/
+    /*height: 1px;*/
+    /*position: absolute;*/
+    /*bottom: 0px;*/
+    /*left: 6px;*/
+    /*background: red;*/
+/*}*/
+.promo-list {
+    float: left;
+}
+.promo-list a{
+    float: left;
+   margin-left: 15px;
+}
+.promo-list a.list-one{
+    margin-left: 14px;
+}
+.promo-list a:hover{
+    box-shadow: 0px 7px 15px 5px rgba(0,0,0,0.1);
+}
+.promo-list img{
+    height: 170px;
+    width: 316px;
+    display: block;
+}
+/**/
+/**/
+.star-box{
+    position: relative;
+}
+.star-title{
+    font-size: 22px;
+    color: #333333;
+    font-weight: 200;
+    height: 58px;
+    line-height: 58px;
+
+
+}
+.more-box{
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+.more-box i{
+    border: 1px solid #e0e0e0;
+    width: 36px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    float: left;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+.more-box i.icon-left{
+    border-right: none;
+}
+.more-box i.icon-active{
+    color: #b0b0b0;
+}
+.more-box i.icon-left:hover{
+    color:#ff6700;
+}
+.pro-list{
+    display: block;
+    width: 1172px;
+}
+.pro-item{
+    width: 234px;
+    height: 301px;
+    background: #fafafa;
+    padding-top: 39px;
+    float: left;
+    margin-right: 14px;
+
+}
+.pro-img-box{
+    display: block;
+    text-align: center;
+}
+.pro-img{
+    width: 160px;
+    height: 160px;
+}
+.pro-title{
+    display: block;
+    height: 21px;
+    line-height: 21px;
+    color:#212121;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 22px;
+
+}.pro-dest{
+     height: 18px;
+    line-height: 18px;
+    text-align:center ;
+    font-size: 12px;
+    color:#b0b0b0;
+    margin-bottom: 12px;
+    margin-right: 20px;
+    margin-left: 20px;
+ }
+ .pro-price{
+     color:#ff6700;
+     text-align: center;
+     font-size: 14px;
+
+
+ }
+
