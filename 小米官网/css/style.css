@@ -555,8 +555,11 @@ img{
     color:#ff6700;
 }
 .pro-list{
-    display: block;
-    width: 1172px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.pro-list ul{
+    width: 2480px;
 }
 .pro-item{
     width: 234px;
@@ -598,7 +601,368 @@ img{
      color:#ff6700;
      text-align: center;
      font-size: 14px;
-
+ }
+ .color-orange{
+     border-top: 1px solid #ff6700;
+ }
+ .color-green{
+     border-top: 1px solid #83c44e;
 
  }
+ .color-dark-green{
+     border-top: 1px solid #00c0a5;
+ }
+.color-blue{
+    border-top: 1px solid #2196f3;
+}
+.color-red{
+    border-top: 1px solid #e53935;
+}
+/**/
+/**/
+.content-box{
+    background: #f5f5f5;
+    padding-top: 60px;
+}
+.homeelec-box{
+    position: relative;
+}
+.capacity-box{
+    position: relative;
+}
+.tab-btns{
+    color: #424242;
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    top: 17px;
+}
+.tab-btns li{
+    float: left;
+    margin-left: 30px;
+    font-weight: 200;
+}
+.tab-btns .active{
+    color:#ff6700;
+    border-bottom: 2px solid #ff6700 ;
+}
+.box-bd{
+    height: 620px;
+}
+.box-bd-1{
+    overflow: hidden;
+    position:relative ;
+
+}
+.box-left{
+    float: left;
+}
+.box-right{
+    float: right;
+    width: 992px;
+
+}
+.box-right-1{
+    float: right;
+    width: 992px;
+    position: absolute;
+    top: 0;
+    left: 234px;
+}
+.bd-item{
+    position: relative;
+    width: 234px;
+    height: 300px;
+    background: #ffffff;
+    float: left;
+    margin-left: 14px;
+    top: 0px;
+}
+.bd-item-s{
+    width: 234px;
+    height: 143px;
+    background-color: #ffffff;
+    float: left;
+    position: relative;
+    margin-left: 14px;
+    position: relative;
+    margin-bottom: 12px ;
+
+
+}
+.bd-img-box{
+    display: block;
+    text-align: center;
+    margin-top: 34px;
+    margin-bottom: 14px;
+
+}
+.bd-img-box-1{
+    display: block;
+
+    margin-bottom: 5px;
+
+}
+.bd-img{
+    width: 150px;
+    height: 150px;
+}
+.bd-img-1{
+    width: 234px;
+    height: 300px;
+}
+.bd-img-s{
+    position: absolute;
+    right: 20px;
+    top: 32px;
+    width: 80px;
+    height: 80px;
+}
+.bd-title{
+    color: #333333;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+ }
+.bd-title-s{
+    color: #333333;
+    display: block;
+    /*margin: 0px 110px 5px 30px;*/
+    font-size: 14px;
+    margin-bottom: -8px;
+    margin-top: 40px;
+    margin-left: 30px;
+
+
+}
+.bd-dest{
+    color: #b0b0b0;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 10px;
+
+}
+.bd-price{
+    color: #ff6700;
+    font-size: 14px;
+    text-align: center;
+}
+.bd-price-s{
+    color: #ff6700;
+    font-size: 14px;
+    /*margin: 0px 110px 5px 30px;*/
+    margin-top: 16px;
+    margin-left: 30px;
+}
+.bd-item-top{
+    margin-bottom: 10px;
+
+}
+.bd-item .flags-1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -25px;
+    height: 17px;
+    line-height: 17px;
+    margin-bottom: 17px;
+}
+.flags-1 span {
+    border:1px solid #83c44e;
+    background-color: #83c44e;
+    font-size:12px;
+    padding: 1px 14px;
+    color: #ffffff;
+}
+.bd-item-s i{
+    font-size: 48px;
+    display: block;
+    height: 48px;
+    line-height: 48px;
+    position: absolute;
+    right: 32px;
+    top: 48px;
+    color: #ff6700;
+}
+.bd-title-m{
+    display: block;
+    margin: 48px 0 0 34px;
+    font-size: 16px;
+    color: #333;
+}
+.bd-item-s small{
+    margin-left: 34px;
+    font-size: 12px;
+    color: #757575;
+}
+/**/
+/**/
+.bd-review{
+    height: 78px;
+    background: #ff6700;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    overflow: hidden;
+
+
+
+}
+.review{
+    color: #ffffff;
+    font-size: 12px;
+    display: block;
+    padding: 8px 30px;
+}
+.author{
+    color: rgba(255,255,255,0.6);
+    font-size: 12px;
+    display: block;
+    padding: 8px 30px;
+    margin-top: -7px;
+}
+.bd-item:hover .bd-review{
+    animation: re-show 0.3s ease forwards;
+}
+@keyframes re-show {
+    100%{
+        height: 78px;
+    }
+}
+.bd-item:hover{
+
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.18);
+    animation: run 0.3s ease forwards;
+}
+@keyframes run {
+    100%{
+        top: -2px;
+    }
+}
+.box-right ul{
+   display: none;
+}
+.box-right .box-active{
+    display: block;
+}
+/**/
+/**/
+.container-box .con-item{
+    background: #ffffff;
+    width: 296px;
+    height: 420px;
+    margin-left: 14px;
+    float: left;
+    position: relative;
+}
+.container-box .con-item-fist{
+    margin-left: 0px;
+
+}
+.container-box{
+    height: 420px;
+}
+.book{
+    border-top: 1px solid #ffac13;
+    color: #ffac13;
+}
+.con-item h2{
+    margin: 45px 0 18px;
+    text-align: center;
+    height: 24px;
+   line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.con-carousel li{
+    width: 296px;
+    float: left;
+}
+.con-name{
+    display: block;
+    font-size: 20px;
+    color: #333333;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 5px;
+
+}
+.con-desc{
+    font-size: 12px;
+    color: #b0b0b0;
+    text-align: center;
+    display: block;
+    margin: 0px 48px 10px;
+}
+.con-price{
+    color: #333;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin-bottom: 14px;
+}
+.con-pic{
+     display: block;
+    text-align: center;
+}
+.carousel-box {
+    width: 888px;
+    overflow: hidden;
+}
+.con-carousel{
+    overflow: hidden;
+}
+.con-btn-box{
+    /*text-align: center;*/
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    margin-left: -56px;
+}
+.con-btn-box li{
+    width: 10px;
+    height: 10px;
+    padding: 10px;
+    margin: 0 2px;
+    display: inline-block;
+    cursor: pointer;
+}
+.con-btn-box span{
+    width: 6px;
+    height: 6px;
+    background: #b0b0b0;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid #fff;
+
+}
+.btn-active span{
+    background: #ffffff;
+    border: 2px solid #ff6700;
+}
+.con-pre-btn,.con-next-btn{
+    width: 20px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    background: #e0e0e0;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    font-weight: bold;
+}
+.con-pre-btn{
+    left: 0px;
+}
+.con-next-btn{
+    right: 0px;
+}
+
+
+
+
+
+
+
 
