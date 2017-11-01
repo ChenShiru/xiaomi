@@ -623,6 +623,7 @@ img{
 .content-box{
     background: #f5f5f5;
     padding-top: 60px;
+    height: 1890px;
 }
 .homeelec-box{
     position: relative;
@@ -958,8 +959,101 @@ img{
 .con-next-btn{
     right: 0px;
 }
+/**/
+/**/
+.site-footer{
+    height: 400px;
+}
+.footer-service{
+    padding: 45px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.list-service{
+    margin-top: -10px ;
+}
 
-
+.list-service li {
+    float: left;
+    width: 243px;
+    height: 25px;
+    text-align: center;
+    position: relative;
+}
+.list-service .nofollow:hover{
+    color: #ff6700;
+}
+.list-service li::after{
+    content: '';
+    width: 1px;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    top:0;
+    background: #e0e0e0;
+}
+.list-service .nofollow{
+        color: #616161;
+}
+.list-service .fot-tubiao{
+    font-size: 23px;
+}
+.list-service span{
+    font-size: 16px;
+}
+.footer-links{
+    padding: 40px 0;
+}
+.footer-links dt{
+    margin: -1px 0 26px;
+    color: #424242;
+    font-size: 14px;
+    line-height: 1.25;
+}
+.col-links{
+    float: left;
+    width: 160px;
+    height: 112px;
+}
+.col-links dd{
+    margin: 10px 0 0;
+    font-size: 12px;
+    color: #757575;
+}
+.col-links dd:hover{
+    color: #ff6700;
+}
+.col-contact{
+    width: 251px;
+    height: 112px;
+    float: right;
+    text-align: center;
+    color: #616161;
+    border-left: 1px solid #e0e0e0;
+    margin-top: -43px;
+}
+.col-contact .phone{
+    margin: 0px 0 5px;
+    font-size: 22px;
+    color: #ff6700;
+    line-height: 1;
+}
+.btn {
+    border: 1px solid #b0b0b0;
+    border-color: #ff6700;
+    display: inline-block;
+    padding: 0px 10px;
+    margin-top: 15px;
+}
+.btn-small {
+    width: 118px;
+    height: 28px;
+    font-size: 12px;
+    line-height: 28px;
+    color: #ff6700;
+}
+.btn-line-primary{
+    color: #ff6700;
+}
 
 
 
