@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+   /* var a = Math.random();
+    var b = Math.random();
+    var max;
+    max=a>b?a:b;
+    alert('a='+a+'\nb='+b+'\nmax='+max);*/
+    /*var toDay=new Date();
+    var year=toDay.getFullYear();
+
+  if(isLeapYear(year)) {
+       console.log(year+'是闰年');
+   }
+   else{
+       console.log(year+'不是闰年');
+   }
+   function isLeapYear(year){
+       if((year%4==0 && year%100!=0) || year%400==0)
+       {
+          return true;
+       }
+       else{
+          return false;
+       }
+   }*/
+
+    /*var age=window.prompt("请输入年龄");
+    if(age<14)
+    {
+        alert("儿童");
+    }else if(age>=14 && age<24){
+        alert("青少年");
+    }else if(age>24 && age<40){
+        alert("青年");
+    }else if(age>40 && age<60){
+        alert("中年");
+    }else if(age>60){
+       alert("老年");
+   }*/
+   /* var num=window.prompt("请输入数字(0-6)");
+    var weekday=new Array(6);
+    weekday[0]="星期天";
+    weekday[1]="星期一";
+    weekday[2]="星期二";
+    weekday[3]="星期三";
+    weekday[4]="星期四";
+    weekday[5]="星期五";
+    weekday[6]="星期六";
+    alert(weekday[num]);*/
+   /* function isLeap(year){
+        return ((year%4==0 && year%100!=0) || year%400==0);
+    }
+    var date=new Date();
+    var year=date.getFullYear();
+    var str=isLeap(year)?'今年是闰年':'今年不是闰年';
+    console.log(str);*/
+   /*var n=10;
+   var i;
+   var num=1;
+   var sum=0;
+        for(i=1;i<n;i++){
+            num*=i;
+        }
+         alert(num);
+*/
+  /* function jie(a){
+       var s = 1;
+       for(var i=1;i<=a;i++){
+           s*=i;
+       }
+       return s;
+   }
+
+   var sum =0;
+   for(var i=1;i<=10;i++){
+       sum += jie(i);
+   }
+   alert(sum);*/
+  /* 4.编写程序，计算 1!+2!+3!+…..＋10！的结果。*/
+    /*function fac(n){
+        if(n == 1){
+            return 1;
+        }
+        return n * fac(n-1);
+    }
+    console.log(fac(10));
+   var sum =0;
+   for(var i=1;i<=10;i++){
+       sum += fac(i);
+   }
+    alert(sum);*/
+  /* 5.在页面上输出如下数字图案。
+   1
+   1 2
+   1 2 3
+   1 2 3 4
+   1 2 3 4 5
+   其中，每行的数字之间有一个空格间隔。*/
+   /* var cow=5;
+    for(var i=1;i<=cow;i++){
+        for(var j=1;j<=i;j++)
+        {
+            document.write(j+'&nbsp');
+        }
+        document.write('<br>');
+
+    }*/
+  /* 6.在页面上输出如下图案。
+   其中，每行的星号"*"之间有一个空格间隔。*/
+   /*var cow=5;
+   for(var i=1;i<=cow;i++){
+       for(var j=1;j<=5-i;j++)
+       {//输出空格
+           document.write('&nbsp');
+       }
+       for(var k=1;k<=i;k++){//输出*
+           document.write('*'+'&nbsp');
+       }
+       document.write('<br>');
+
+   }*/
+  /* 7.有一个三位数x，被4除余2，被7除余3，被9除余5，请求出这个数。*/
+   /* var i;
+    for(i=100;i<1000;i++)
+    {
+        if(i%4==2 && i%7==3 && i%9==5){
+           console.log(i);
+        }
+    }*/
+  /* 求所有满足条件的四位数ABCD，它是13的倍数，且第3位数加上第2位数等于第4位数（即：A=B+C）。
+   （提示：对于四位数的整数x，通过Math.floor(x/1000)可求出第4位的数字，其他位数的提取也类似）*/
+    /*for(var i=1000;i<=9999;i++){
+        if(i%13 == 0 && Math.floor(i/1000) == (Math.floor(i%1000/100)+Math.floor(i%100/10))){
+            document.write(i+"</br>");
+
+        }
+    }*/
+   /*1.编写一个函数 f(x) = 4x2+3x+2，使用户通过提示对话框瑜入x的值，能得到相应的计算结果。*/
+    /*function f(x){
+        return 4*Math.pow(x,2)+3*x
+    }
+*/
+   /*编写一个判断某个非负整数是否能够同时被3,5,7整除的函数，然后在页面上输出1~1000之间所有能同时被3,5,7整除的整数，并要求每行显示6个这样的数。*/
+   /*var count=0;
+    function aa(num){
+        return (num>0 && (parseInt(num)==num) && num%3==0 && num%5==0 && num%7==0);
+    }
+    for(var i=1; i<1000;i++){
+        if(aa(i)){
+            count++;
+            document.write(i+',');
+            if(count%6 == 0){
+                document.write('<br/>');
+            }
+        }
+    }*/
+  /* 4.在页面上编程输出100~1000之间的所有素数，并要求每行显示6个素数。*/
+    /*function prime(num){
+        for(var i=2;i<=Math.sqrt(num);i++){
+            if(num % i == 0 ){
+                return false;
+
+            }
+        }
+        return true;
+    }
+   var count=0;
+    for(var i=100;i<=1000;i++){
+        if(prime(i)){
+            count++;
+            document.write(i+'&nbsp');
+            if(count%6==0){
+                document.write('<br/>');
+            }
+        }
+    }*/
+   /*7.斐波纳契（Fibonacci）数列的第一项是1，第二项是1，以后各项都是前两项的和。
+   试用递归函数和非递归函数各编写一个程序，求斐波纳契数列第N项的值。*/
+   /*递归的*/
+   /* function Fib(n){
+        if(n<=2){
+            return 1;
+
+        }
+        return arguments.callee(n-1)+arguments.callee(n-2);
+    }
+    console.log(Fib(6));*/
+/*非递归*/
+     /* function Fib1(n){
+          if(n <= 2){
+              return 1;
+
+          }
+          var arr = [1,1];//arr[0]=1 arr[1]=1
+          for(var i=2;i<n;i++){
+              arr[i]=arr[i-1]+arr[i-2];//arr[2]=arr[0]+arr[1]
+          }
+          return arr[n-1];
+      }
+    console.log(Fib1(6));*/
+  /* 8.编写函数，用下面的公式计算π的近似值。
+
+    在页面上输出当n=100，500，1000，10000时π的近似值。*/
+   /* function pi(n){
+        var sum;
+        for(var i=1;i<=n;i++){
+            sum+=Math.pow(-1,(i-1))/(2*i-1);
+        }
+        return sum * 4;
+    }
+    console.log(pi(100));*/
+ /*  9.利用全局变量和函数，设计模拟幸运数字机游戏。设幸运数字为8，每次由计算机随机产生3个1-9之间(包括1和9）的随机数，
+   当这3个随机数中有一个数字为8时，就算赢了一次，要求利用函数计算获胜率。*/
+   /* var x, y, z,win,isContinue=true,count= 0,wNum=0;
+    function game(){
+
+        x=Math.floor(Math.random()*9)+1;
+        y=Math.floor(Math.random()*9)+1;
+        z=Math.floor(Math.random()*9)+1;
+        count++;
+        if(x == 8||y == 8||z == 8){
+            win='赢了';
+            wNum++;
+        }else{
+            win='输了';
+        }
+
+    }
+    while(isContinue){
+        game();
+        isContinue = confirm(x+" "+y+" "+z+"\n"+win+"\n"+"获胜率："+wNum/count*100+"%")
+    }
+*/
+  /* 5.编制一个将两个字符串交叉合并的函数Merge(s1,s2)，例如Merge("123","abc"）的返回结果是"1a2b3c"，
+   如果两个字符串的长度不同，那么就将多余部分直接合并到结果字符串的末尾，如Merge("123456",''abc''）的返回结果是”1a2b3c456”。*/
+   /* function Merge(s1,s2){
+        var length=Math.max(s1.length,s2.length);
+        var str="";
+        for(var i=0;i<length;i++){
+            if(i<s1.length){
+                str+=s1[i];
+            }
+            if(i<s2.length){
+                str+=s2[i];
+            }
+        }
+        return str;
+    }
+    console.log(Merge("123456","abc"));*/
+  /* 6.设计一个程序，它（使用一个数组）接收用户输入的7门课程的  成绩，然后在页面上显示其总成绩和平均分，并列出小于60的成绩。*/
+   /* var arr=new Array(7);
+   var sum=0;
+   for(var i=0;i<arr.length;i++){
+                arr[i]=parseFloat(prompt("请输入第"+(i+1)+"门课程的成绩:","0"));
+                sum+=arr[i];
+
+   }
+    document.write("总成绩为："+sum+'<br/>');
+    document.write("平均分为："+sum/arr.length+'<br/>');
+    document.write("不及格的为："+'<br/>');
+    for(i=0;i<arr.length;i++){
+        if(arr[i]<60){
+            document.write(arr[i]);
+            document.write("&nbsp");
+        }
+    }*/
+   /*7.斐波纳契（Fibonacci）数列的第一项是1，第二项是1，以后各项都是前两项的和。请按逆序在页面中显示斐波纳契数列前40项的值
+   （即，如果计算出来的数列是1,1,2,3,5,8…，那么显示的顺序是…，8,5,3,2,1,1)，并要求每行显示6个数。*/
+   /*var count= 0;
+
+    function Fib(n){
+        if(n<=2){
+            return 1;
+        }
+        var arr=[1,1];
+        for(var i=2;i<n;i++){
+            arr[i]=arr[i-1]+arr[i-2];
+        }
+
+    }
+    for(i=arr.length-1;i>=0;i--){
+        document.write(arr[i]+"&nbsp");
+        if(count%6==0) document.write("\n");
+        count++;
+
+    }*/
+   /*var fibs=new Array(40),i,nb=0;
+
+   for(i=0;i<fibs.length;i++)
+   {
+       if(i<2)
+           fibs[i]=1;
+       else
+           fibs[i] = fibs[i-2]+fibs[i-1];
+   }
+   for(i=fibs.length-1;i>=0;i--)
+   {
+       if(nb%6==0) document.write("<br/>");
+       document.write(fibs[i]+"\t\t");
+       nb++;
+   }*/
+  /* 8.设计一个函数DayOfYear(d)，它接收一个日期参数d，返回一个该日期是所在年份的第几天，如DayOfYear(2000,2,8)的返回值是39.
+   （提示：①定义一个数组months=new Array（31,28,31,30,31,30,31,31,30,31，30,31）
+   记录每个月少天：②定义一个辅助函数IsLeapYear(y)判定某个年份是否闰年，以确定2月份的天数是28还是29。）*/
+  var months=new Array(31,28,31,30,31,30,31,31,30,31,30,31);
+    function DayOfYear(year,months,day ){
+        var result=0;
+        if(IsLeapYear(year)){
+            months[1]=29;
+
+        }
+
+    }
+    function IsLeapYear(year){
+        return ((year%4==0 && year%100!=0) || year%400 == 0);
+    }
+
+</script>
+</body>
+</html>
