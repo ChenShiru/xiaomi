@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="div1">
+        111
+    </div>
+    <ul id="ul1">
+        <li>014</li>
+        <li>024</li>
+        <li>034</li>
+        <li>044</li>
+    </ul>
+    <ul id="ul2">
+        <li>014</li>
+        <li>024</li>
+        <li>034</li>
+        <li>044</li>
+    </ul>
+    <script>
+        var oDiv=document.getElementById("div1");
+        oDiv.onclick=function(){
+            oDiv.style.background = 'red';
+            oDiv.style.color = 'white';
+
+        }
+        var aUl2 = document.getElementById('ul2');
+        var aLi = aUl2.getElementsByTagName('li');
+
+        for(var i=0;i<aLi.length;i++){
+            aLi[i].innerHTML =  Math.random();
+            aLi[i].style.background = 'red';
+        }
+    </script>
+</body>
+</html>
