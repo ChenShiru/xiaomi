@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="div1">sdsdsads</div>
+<ul id="ul1">
+    <li>014</li>
+    <li class="aa">024</li>
+    <li>034</li>
+    <li class="aa">044</li>
+</ul>
+<input type="text"name="username"/>
+<script>
+    var oDiv = document.getElementById('div1');
+    function next(elem){
+        do{
+            elem=elem.nextSibling;
+        }while(elem!=null && elem.nodeType!=1);
+        return elem;
+    }
+    console.log(next(oDiv));
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="div1">
+
+    </div>
+    <script>
+        var person = {
+            name:'zhangsan',
+            age:19
+        };
+        //函数中this指向window
+        function aa(x,y){
+            console.log(x+","+y);
+            console.log(this.name);
+        }
+        //改变this指向
+        aa.call(person,4,5);
+        aa.apply(person,[4,5]);
+        aa.bind(person,4,5)();
+        //事件中  this队当前对象的引用
+        var oDiv = document.getElementById('div1');
+        oDiv.onclick = function(){
+            console.log(this);
+        };
+        //对象 this对当前对象的引用
+        var cat = {
+            name:'mini',
+            age:3,
+        }
+
+    </script>
+</body>
+</html>

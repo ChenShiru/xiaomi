@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="div1">
+    fsfsf
+<span id="span1">hhh</span>
+</div>
+<script>
+    var oP = document.createElement('p');
+    oP.innerHTML = 'sfa';
+    var oDiv = document.getElementById('div1');
+    var oSpan = document.getElementById('span1');
+    oDiv.appendChild(oP);
+    oDiv.removeChild(oSpan);
+    oDiv.replaceChild(oP,oSpan);
+    oDiv.insertBefore(oP,oSpan);
+    document.body.appendChild(oSpan.cloneNode(true));
+    oDiv.setAttribute('xx','aaaaa');
+    console.log(oDiv.getAttribute())
+    //节点操作
+    //createElement
+    //appendChild
+    //removeChild
+    //replaceChild
+    //insertBefore
+    //cloneNode
+</script>
+
+</body>
+</html>

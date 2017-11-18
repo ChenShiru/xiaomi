@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    #div1{
+        width: 200px;
+        height: 300px;
+        background: #ff0000;
+    }
+    </style>
+</head>
+
+<body>
+<div id="div1">
+
+</div>
+<script>
+    var oDiv = document.getElementById('div1');
+    function addEvent(elem,type,fn,flag){
+        if(elem.addEventListener){//标准浏览器
+            elem.addEventListener(type,fn,flag);
+        }else{//ie浏览器
+            elem.attachEvent('on'+type,function(){
+                fn.call(elem);
+            });
+            //绑定事件   this指向window
+        }
+    }
+    addEvent(oDiv,'click',function(){
+        alert(1111);
+    },false);
+    oDiv.onclick = function(e){
+        e = e||window.event;
+        console.log(this);
+        var target = e.target || e.srcElement;
+        console.log(target);//事件源
+        console.log(e.currentTarget);
+    }
+    var oB
+</script>
+
+</body>
+</html>
