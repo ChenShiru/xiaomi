@@ -9,7 +9,7 @@
 
     </div>
     <script>
-        var person = {
+       /* var person = {
             name:'zhangsan',
             age:19
         };
@@ -31,6 +31,16 @@
         var cat = {
             name:'mini',
             age:3,
+            eat:function(){
+
+            }
+        }*/
+        var oDiv1 = document.getElementById('div1');
+        oDiv1.onclick = function(){
+            var _this = this;
+            setTimeout(function(){
+                console.log(_this);
+            },1000)
         }
 
     </script>

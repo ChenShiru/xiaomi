@@ -16,6 +16,7 @@
 <div id="div1">
 
 </div>
+<a href="http://www.baidu.com" id="btn">baidu</a>
 <script>
     var oDiv = document.getElementById('div1');
     function addEvent(elem,type,fn,flag){
@@ -30,15 +31,28 @@
     }
     addEvent(oDiv,'click',function(){
         alert(1111);
+        alert(2222);
     },false);
-    oDiv.onclick = function(e){
+    /*oDiv.onclick = function(e){
         e = e||window.event;
         console.log(this);
         var target = e.target || e.srcElement;
         console.log(target);//事件源
-        console.log(e.currentTarget);
-    }
-    var oB
+        console.log(this);//谁的事件
+        console.log(e.currentTarget);//跟this一样
+    }*/
+/*document.onkeydown = function(e){
+    var keycode = e.keyCode || window.event.which;
+    console.log(keycode);
+}*/
+    /*阻止默认行为*/
+   /* var oBtn = document.getElementById('btn');
+    oBtn.onclick = function(e){
+        e = e || window.event;
+        e.preventDefault();//标准浏览器
+        e.returnValue = false;//IE浏览器
+        return false;//通用
+    }*/
 </script>
 
 </body>

@@ -19,7 +19,7 @@
             height: 200px;
             background: #b0b0b0;
             opacity: 0.6;
-            filter: alpha(opacity = 60);
+            filter: alpha(opacity = 60);/*//兼容IE，透明*/
             position: absolute;
             left:0;
             top:0;
@@ -104,6 +104,7 @@
             oBigImg.style.left = -iLeft*(oBigImg.offsetWidth/oSmallBox.offsetWidth)+"px";
             oBigImg.style.top = -iTop*(oBigImg.offsetWidth/oSmallBox.offsetWidth)+"px";
         }
+
 
 
     </script>

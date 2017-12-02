@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #f00;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="user"/>
+<div id="div1"></div>
+<ul>
+    <li>item01</li>
+    <li>item02</li>
+    <li>item03</li>
+</ul>
+<button id="btn" value="click">click</button>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    /*$('#btn').on('click',function(){
+        $('<li>'+Math.random()+'</li>').appendTo('ul')
+    });*/
+   /* $('ul').on('click','li',function(){
+        console.log($(this).html())
+    });
+    var fn = function(){
+        $('<li>'+Math.random()+'</li>').appendTo('ul');
+    };
+    $('#btn').on('click',fn);
+    $('#btn').off('click',fn);*/
+    $('#user').on('focus',function(){
+
+    });
+    $('#btn').on('click',function(){
+        $('#user').trigger('focus');
+        $('#user').triggerHandler('focus');
+    });
+    /*$('#div1').hover(function(){
+        alert(111);
+    },function(){
+        alert(222);
+    });
+    $(window).on('resize',function(){
+
+    });*/
+    /*mouseenter   mouseleave  不支持事件冒泡*/
+    /*mouseover    mouseout    支持事件冒泡*/
+</script>
+</body>
+</html>

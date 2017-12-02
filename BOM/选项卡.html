@@ -59,8 +59,13 @@
        </div>
 
     </div>
+    <script src="../jquery/jquery-1.12.4.jsd"></script>
     <script>
-        var oContent=document.getElementById('content');
+        $('#btn li').on('click',function(){
+            $(this).addClass('selected').siblings().removeClass('selected');
+            $('#content div').eq($(this).index()).addClass('active').siblings().removeClass('active');
+        })
+        /*var oContent=document.getElementById('content');
         var aDiv = oContent.getElementsByTagName('div');
         var oUl=document.getElementById('btn');
         var aLi=oUl.getElementsByTagName('li');
@@ -75,7 +80,7 @@
                 aDiv[this.index].className ='active';//找到与点击li索引对应的div，添加active
 
             }
-        }
+        }*/
     </script>
 
 </body>
