@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function A(name,age){
+        this.name=name;
+        this.age=age
+    };
+    A.prototype.say=function(){
+        console.log(this.name+"is saying...")
+    };
+    function B(name,age){
+        this.school='heida';
+        A.call(this,name,age);
+    };
+    B.prototype=new A();
+    var oB=new B('b',13);
+    oB.say();
+      console.log(oB);
+</script>
+
+</body>
+</html>

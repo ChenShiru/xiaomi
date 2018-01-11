@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #stage{
+            width: 1000px;
+            height: 300px;
+            margin: 100px auto;
+            background: #cccccc;
+            box-shadow: 0 0 2px 4px rgba(0,0,0,0.6);
+           /* border: 1px solid rgba(0,0,0,0.6);*/
+            overflow: hidden;
+            -webkit-perspective: 800px;
+            perspective-origin: center -30%;
+        }
+        #container{
+            width: 128px;
+            height: 100px;
+            margin: 50px auto;
+            /*background: #ff0000;*/
+            position: relative;  /*//外边距合并解决办法：给父元素加overflow:hidden
+                                  或者加border*/
+            -webkit-transform-style: preserve-3d;
+            transition: transform 1s ease;
+        }
+        #container img{
+            width: 128px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: transform 1s ease;
+
+        }
+    </style>
+</head>
+<body>
+<div id="stage">
+    <div id="container">
+    </div>
+</div>
+<script>
+    var oContainer=document.getElementById('container');
+    var x = 64/Math.tan(20*Math.PI/180)+20;
+    var html='';
+    var idx=0;
+    for(var i=0;i<9;i++){
+        html+="<img  src='img/"+(i+1)+".jpg'/>"
+    }
+    oContainer.innerHTML=html;
+    oContainer.onclick=function(){
+        idx++;
+        oContainer.style.transform="rotateY("+idx*40+"deg)";
+    }
+
+   var aImg = oContainer.getElementsByTagName('img');
+    var index=9;
+    var timer=setInterval(function(){
+        index--;
+        if(index<0){
+            clearInterval(timer);
+        }else{
+            aImg[index].style.transform="rotateY("+index*40+"deg) translateZ("+x+"px)";
+        }
+        /*style='-webkit-transform:rotateY("+i*40+"deg) translateZ("+x+"px)'*/
+    },1000)
+</script>
+
+</body>
+</html>

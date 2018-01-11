@@ -9,6 +9,7 @@
 
 </head>
 <body>
+
     <div class="banner" >
         <a href="#"></a>
     </div>
@@ -270,16 +271,18 @@
         </div>
         <div class="slide">
             <div class="img-box">
-                <a href="#"><img src="img/11.jpg" alt=""/> </a>
-                <a href="#"><img src="img/22.jpg" alt=""/> </a>
-                <a href="#"><img src="img/33.jpg" alt=""/></a>
-                <a href="#"><img src="img/44.jpg" alt=""/> </a>
-                <a href="#"><img src="img/55.jpg" alt=""/></a>
-                <a href="#"><img src="img/66.jpg" alt=""/> </a>
-                <i class="iconfont icon-arrowleft prev-btn"></i>
-                <i class="iconfont icon-arrowright next-btn"></i>
+               <img class="selected" src="img/11.jpg" alt=""/>
+               <img src="img/22.jpg" alt=""/>
+               <img src="img/33.jpg" alt=""/>
+               <img src="img/44.jpg" alt=""/>
+                <img src="img/55.jpg" alt=""/>
+                <img src="img/66.jpg" alt=""/>
+            </div>
+                <i class="iconfont icon-arrowleft prev-btn" id="prev-btn"></i>
+                <i class="iconfont icon-arrowright next-btn" id="next-btn"></i>
+
                 <ul class="btns">
-                    <li></li>
+                    <li class="chos"></li>
                     <li></li>
                     <li></li>
                     <li></li>
@@ -287,7 +290,7 @@
                     <li></li>
                 </ul>
                 
-            </div>
+
         </div>
     </div>
     <div class="wrapper channel-box">
@@ -953,6 +956,8 @@
     </div>
 
 
-
+    <script src="jquery-1.12.4.js" type="text/javascript"></script>
+    <script src="jquery.cookie.js" type="text/javascript"></script>
+    <script src="script/index.js" type="text/javascript"></script>
 </body>
 </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div3{
+
+            background: #eee;
+            /*overflow: hidden;*/
+            /*height: 50px;*/
+        }
+        #div1{
+            width: 200px;
+            height: 50px;
+            background: #ff0000;
+            float: left;
+        }
+        #div2{
+            width: 100px;
+            height: 50px;
+            background: #00ff00;
+            float: right;
+        }
+         #div4{
+             clear: both;
+         }
+    /*    .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }*/
+
+    </style>
+</head>
+<body>
+<div id="div3" class="clearfix">
+    <div id="div1">111</div>
+    <div id="div2">2222</div>
+    <div id="div4"></div>
+</div>
+<h3>fsdfdsfdsfsdfsf</h3>
+
+</body>
+</html>
+<!--
+//伪类不是真实存在的
+//伪对象不是真实存在但可以虚拟出来
+//浮动和定位能解决使用::after元素不能显示问题
+//浮动导致塌陷，解决：给父元素加overflow:hidden;给高度固定，写死；在浮动元素下再添加一个元素使用clear:both例<div id="div4"></div>#div4{clear:both};-->
+/*注意：overflow: hidden; text-overflow:ellipsis;white-space:nowrap;一定要一起用;一定要给容器定义宽度*/

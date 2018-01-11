@@ -297,7 +297,11 @@ img{
     position: absolute;
     top: 0;
     left:  0;
+    display: none;
 
+}
+.img-box img.selected{
+    display: block;
 }
 .prev-btn,.next-btn{
     width:40px;
@@ -331,6 +335,10 @@ img{
     border-radius: 50%;
     cursor: pointer;
 }
+.btns li.chos{
+    background: #898a8e;
+    border:2px solid #4f4e56;
+}
 .btns li:hover{
     background: #898a8e;
     border:2px solid #4f4e56;
@@ -338,13 +346,13 @@ img{
 .btns{
     width: 128px;
     position: absolute;
-    right: 0px;
+    right: 0;
     bottom:20px;
 }
 .list{
     position: absolute;
-    left:0px;
-    top: 0px;
+    left:0;
+    top: 0;
     z-index: 1;
     background: rgba(0,0,0,0.6) ;
     padding: 20px 0;
