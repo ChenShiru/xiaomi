@@ -106,14 +106,14 @@
            }
            changeImage(iNow);
 
-       }
+       };
        oPrevBtn.onclick=function(){
            iNow--;
            if(iNow==-1){
                iNow=aImg.length-1;
            }
            changeImage(iNow);
-       }
+       };
         function changeImage(idx) {
             for (var j = 0; j < aLi.length; j++) {
                 aLi[j].className = '';

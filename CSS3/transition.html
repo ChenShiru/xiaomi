@@ -8,8 +8,9 @@
             width: 200px;
             height: 200px;
             background: #ff0000;
-            -webkit-animation:run 2s ease 1s forwards  2 ;
-          /*  -webkit-transition:width 2s ease-in 3s;*/
+            -webkit-animation:run 2s ease 1s 2 forwards  ;/*上来就执行，可以分阶段实现比如百分之几的时候实现某功能*/
+          /*  -webkit-transition:width 2s ease-in 3s;*//*要有条件才能触发*/
+
         }
         @keyframes run {
             50%{
