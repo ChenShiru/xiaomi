@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/common.css"/>
+</head>
+<body>
+<div id="header">
+    <div class="wrapper">
+        <div id="logo">
+            <a href="#">
+                <img src="images/logo1.png" alt=""/>
+            </a>
+        </div>
+        <ul class="nav">
+            <li><a href="#">About</a></li>
+            <li class="active"><a href="#">Services </a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Blog </a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+       <div class="isearch">
+        <input class="search" type="text" style="border:none"/>
+        <button class="btn" style="border:none;"><img src="images/search.png" alt=""/></button>
+       </div>
+
+    </div>
+</div>
+<div class="slide-box">
+    <div class="img-box wrapper ">
+        <div class="roll">
+        <img class="selected" src="images/网页首页.jpg" alt=""/>
+        <img src="images/网页首页.jpg" alt=""/>
+        <img src="images/网页首页.jpg" alt=""/>
+        <img src="images/网页首页.jpg" alt=""/>
+        </div>
+        <span class="left"><img src="images/21.png" alt=""/></span>
+        <span class="right"><img src="images/17.jpg" alt=""/></span>
+    </div>
+    </div>
+
+    <div class="wrapper channel-box">
+        <ul class="container-box">
+            <li class="con-item con-item-fist">
+                <h1>Web Design</h1>
+                <img src="images/1.jpg" alt=""/>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus, lacus ac commodo volutpat, felis odio pulvinar enim, non dapibus mauris nulla sed ipsum.</p>
+                <p class="p1">READ MORE</p>
+            </li>
+            <li class="con-item con-item-second">
+                <h1>Social Media</h1>
+                <img src="images/2.jpg" alt=""/>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus, lacus ac    commodo volutpat, felis odio pulvinar enim, non dapibus mauris nulla sed ipsum.</p>
+                <p class="p1">READ MORE</p>
+            </li>
+            <li class="con-item">
+                <h1>Mobile Apps</h1>
+                <img src="images/3.jpg" alt=""/>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus, lacus ac    commodo volutpat, felis odio pulvinar enim, non dapibus mauris nulla sed ipsum.</p>
+                <p class="p1">READ MORE</p>
+            </li>
+        </ul>
+    </div>
+<div class="pic-box">
+
+    <div class="wrapper pic-link">
+        <h1 class="title">Our Works</h1>
+        <ul class="link-box">
+            <li><img src="images/4.jpg" alt=""/></li>
+            <li><img src="images/5.jpg" alt=""/></li>
+            <li><img src="images/6.jpg" alt=""/></li>
+            <li><img src="images/7.jpg" alt=""/></li>
+            <li><img src="images/8.jpg" alt=""/></li>
+            <li><img src="images/9.jpg" alt=""/></li>
+            <li><img src="images/10.jpg" alt=""/></li>
+            <li><img src="images/11.jpg" alt=""/></li>
+        </ul>
+    </div>
+</div>
+<div class="bottom-nav" >
+    <div class="wrapper bottom-box ">
+        <h1>Clients</h1>
+        <ul>
+            <li class="b-pre"><img src="images/16.jpg" alt=""/></li>
+            <li class="b-next"><img src="images/17.jpg" alt=""/></li>
+        </ul>
+        <div class="brandList">
+            <div class="brand">
+        <ul>
+            <li class="li1"><img src="images/12.jpg" alt=""/></li>
+            <li class="li2"><img src="images/13.jpg" alt=""/></li>
+            <li class="li3"><img src="images/14.jpg" alt=""/></li>
+            <li class="li4"><img src="images/15.jpg" alt=""/></li>
+            <li class="li1"><img src="images/12.jpg" alt=""/></li>
+            <li class="li2"><img src="images/13.jpg" alt=""/></li>
+            <li class="li3"><img src="images/14.jpg" alt=""/></li>
+            <li class="li4"><img src="images/15.jpg" alt=""/></li>
+        </ul>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div class="end">
+    <div class="wrapper end-box">
+       <div class="end-left">
+           <ul>
+               <li>Home</li>
+               <li>About </li>
+               <li>Services</li>
+               <li>Work</li>
+               <li> Blog </li>
+               <li>Contact us</li>
+           </ul>
+           <p class="p1">© 2013 BlueBox.  All Rights Reserved</p>
+           <p class="p2">The logos used in the design are the property of their respective owners / copyright holders.</p>
+       </div>
+        <div class="end-right">
+            <img src="images/20.jpg" alt=""/>
+        </div>
+    </div>
+</div>
+<script>
+    var oImgBox = document.getElementsByClassName('img-box')[0];
+    var oRoll= document.getElementsByClassName('roll')[0];
+    var aImg = oRoll.getElementsByTagName('img');
+    var ONextBtn=document.getElementsByClassName('left')[0];
+    var oPrevBtn = document.getElementsByClassName('right')[0];
+    var iNow = 0;
+    var timer;
+    ONextBtn.onclick=function(){
+        iNow++;
+        if(iNow>=aImg.length){
+            iNow=0;
+        }
+        changeImage(iNow);
+
+    };
+    oPrevBtn.onclick=function(){
+        iNow--;
+        if(iNow==-1){
+            iNow=aImg.length-1;
+        }
+        changeImage(iNow);
+    };
+    function changeImage(idx) {
+        console.log(1111);
+        for (var j = 0; j < aImg.length; j++) {
+            aImg[j].className = '';
+        }
+        aImg[idx].className='selected';
+    }
+    run();
+    oImgBox.onmouseover = function(){
+        clearInterval(timer);
+    }
+    oImgBox.onmouseout = function(){
+        run();
+    }
+    function run(){
+        timer = setInterval(function(){
+            ONextBtn.onclick();
+        },1000)
+    }
+
+</script>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/index.js"></script>
+
+
+
+
+
+</body>
+</html>
