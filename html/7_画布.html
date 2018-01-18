@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #myCanvas{
+            background: #000000;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+<script>
+    var c = document.querySelector('#myCanvas');
+    var cxt= c.getContext("2d");
+   var  clickX=new Array();
+     var clickY=new Array();
+    c.onmousedown=function(e){
+      var mouseX= e.pageX;
+        var mouseY= e.pageY;
+        addClick(mouseX,mouseY);
+        redraw();
+    };
+    c.onmouseup=function(e){
+       redraw();
+    };
+
+    c.onmousemove=function(e){
+        var mouseX= e.pageX;
+        var mouseY= e.pageY;
+        addClick(mouseX,mouseY);
+        redraw();
+    };
+    c.onmouseout=function(e){
+    };
+    function addClick(mouseX,mouseY){
+        clickX.push(mouseX);
+        clickY.push(mouseY);
+    }
+    function redraw(){
+        cxt.strokeStyle='red';
+        cxt.lineWidth=10;
+        var num=clickX.length;
+        for(var i=0;i<num;i++)
+        {
+            cxt.beginPath();
+            cxt.moveTo(clickX[i-1],clickY[i-1]);
+            cxt.lineTo(clickX[i],clickY[i]);
+        }
+        cxt.closePath();
+        cxt.stroke();
+
+    }
+
+
+</script>
+</body>
+</html>

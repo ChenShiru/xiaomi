@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #myCanvas{
+            background: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+
+<script>
+    var oCvs=document.querySelector('#myCanvas');
+    var oCxt=oCvs.getContext("2d");
+    oCxt.lineWidth=10;
+    oCxt.strokeStyle="blue";
+    oCxt.beginPath();
+    oCxt.arc(250,250,200,0,2*Math.PI);
+    oCxt.closePath();
+    oCxt.stroke();
+    for(var i=0;i<12;i++){
+        oCxt.save();
+        oCxt.lineWidth=7;
+        oCxt.strokeStyle="black";
+        oCxt.translate(250,250);
+        oCxt.rotate(i*30*Math.PI/180);
+        oCxt.beginPath();
+        oCxt.moveTo(0,-170);
+        oCxt.lineTo(0,-200);
+        oCxt.stroke();
+        oCxt.restore();
+    }
+    for(var i=0;i<60;i++){
+        oCxt.save();
+        oCxt.lineWidth=5;
+        oCxt.strokeStyle="black";
+        oCxt.translate(250,250);
+        oCxt.rotate(i*6*Math.PI/180);
+        oCxt.beginPath();
+        oCxt.moveTo(0,-180);
+        oCxt.lineTo(0,-200);
+        oCxt.stroke();
+        oCxt.restore();
+
+
+    }
+
+    function clock(){
+        oCxt.clearRect(150,150,234,234);
+        var data=new Date();
+        var second= data.getSeconds();
+        var minute=data.getMinutes()+second/60;
+        var  hour= data.getHours()+minute/60;
+
+
+        /*时针*/
+        oCxt.save();
+        oCxt.lineWidth=7;
+        oCxt.strokeStyle='black';
+        oCxt.translate(250,250);
+        oCxt.rotate(hour*30*Math.PI/180);
+        oCxt.beginPath();
+        oCxt.moveTo(0,-70);
+        oCxt.lineTo(0,10);
+        oCxt.closePath();
+        oCxt.stroke();
+        oCxt.restore();
+        /*分钟*/
+        oCxt.save();
+        oCxt.lineWidth=5;
+        oCxt.strokeStyle='green';
+        oCxt.translate(250,250);
+        oCxt.rotate(minute*6*Math.PI/180);
+        oCxt.beginPath();
+        oCxt.moveTo(0,-90);
+        oCxt.lineTo(0,15);
+        oCxt.closePath();
+        oCxt.stroke();
+        oCxt.restore();
+            /*秒钟*/
+        oCxt.save();
+        oCxt.lineWidth=3;
+        oCxt.strokeStyle='red';
+        oCxt.translate(250,250);
+        oCxt.rotate(second*6*Math.PI/180);
+        oCxt.beginPath();
+        oCxt.moveTo(0,-100);
+        oCxt.lineTo(0,17);
+        oCxt.closePath();
+        oCxt.stroke();
+        oCxt.beginPath();
+        oCxt.arc(0,0,5,0,360,false);
+        oCxt.closePath();
+        oCxt.fillStyle="gray";
+        oCxt.fill();
+        oCxt.stroke();
+        oCxt.beginPath();
+        oCxt.arc(0,-80,5,0,360,false);
+        oCxt.fillStyle='red';
+        oCxt.fill();
+        oCxt.stroke();
+        oCxt.restore();
+    }
+    clock();
+    setInterval(clock,1000);
+
+
+   /* oCxt.moveTo(200,0);
+    oCxt.lineTo(200,400);
+    oCxt.stroke();
+    oCxt.moveTo(0,200);
+    oCxt.lineTo(400,200);
+    oCxt.stroke();
+    oCxt.arc(200,200,185,0,2*Math.PI);*/
+
+   /* oCxt.stroke();*/
+
+</script>
+</body>
+</html>
