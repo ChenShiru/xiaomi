@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" href="../d.min.css"/>
+    <link rel="stylesheet" href="../jquery.mobile.icons.min.css"/>
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .image{
+            width: 25%;
+            border: 2px solid #000000;
+            float: left;
+            box-sizing: border-box;
+        }
+        #img-box{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: #000000 center center no-repeat ;
+            -webkit-background-size: contain;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+<div id="container">
+</div>
+<div id="img-box">
+</div>
+<script src="../jquery-1.12.4.js"></script>
+<script src="../jquery.mobile-1.4.5.min.js"></script>
+<script>
+    /*var num=0;
+    var iNow;
+    for(var i=0;i<24;i++){
+        var oImg=new Image();
+        oImg.onload=function(){
+            num++;
+            if(num==48){
+                loadSuccess();
+            }
+        };
+        oImg.src="img/thumbs/"+(i+1)+".jpg";
+    }
+    for(var i=0;i<24;i++){
+        var oImg =new Image();
+        oImg.onload=function(){
+            num++;
+            if(num==48){
+                loadSuccess();
+            }
+        };
+        oImg.src="img/"+(i+1)+".jpg";
+    }
+    var oContainer=document.getElementById('container');
+    function loadSuccess(){
+        var count=0;
+        for(var i=1;i<5;i++){
+            for(var j=1;j<7;j++){
+                var oImage=document.createElement('img');
+                oImage.className='image';
+                count++;
+                oImage.index=count;
+                oImage.src='img/thumbs/'+count+'.jpg';
+                oImage.pos={
+                    row:i,
+                    col:j
+                };
+                oContainer.append(oImage);
+            }
+        }
+    }
+    $('#container').on('click','img',function(){
+    })*/
+    var html="";
+    var iNow=0;
+    for(var i=0;i<24;i++){
+        html+="<img class=image src='img/thumbs/"+(i+1)+".jpg'/>";
+    }
+    $('#container').append(html);
+    $('#container').on('tap','.image',function(e){
+        var id = $(this).index();
+        iNow=id;
+        $('#container').hide();
+        $('#img-box').show().css('background-image','url(img/'+(id+1)+'.jpg)');
+        e.preventDefault();
+    })
+    $('#img-box').on('tap',function(e){
+        $('#container').show();
+        $('#img-box').hide();
+        e.preventDefault();
+    })
+    $('#img-box').on('swipeleft',function(){
+        iNow++;
+        if(iNow == $('.image').length){
+            iNow=0;
+        }
+        $('#img-box').css('background-image','url(img/'+(iNow+1)+'.jpg)');
+    });
+    $('#img-box').on('swiperight',function(){
+        iNow--;
+        if(iNow == -1){
+            iNow = $('.image').length -1;
+        }
+        $('#img-box').css('background-image','url(img/'+(iNow+1)+'.jpg)');
+    });
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" href="../d.min.css"/>
+    <link rel="stylesheet" href="../jquery.mobile.icons.min.css"/>
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .image{
+            width: 25%;
+            border: 2px solid #000000;
+            box-sizing: border-box;
+            float: left;
+
+        }
+        #img-box{
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background: #000000 center center no-repeat;
+            -webkit-background-size: contain;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+</div>
+<div id="img-box">
+</div>
+<script src="../jquery-1.12.4.js"></script>
+<script src="../jquery.mobile-1.4.5.min.js"></script>
+<script>
+    var html="";
+    var iNow=0;
+    for(var i=0;i<24;i++){
+        html+='<img class="image" src="img/thumbs/'+(i+1)+'.jpg"/>'
+    }
+    $('#container').append(html);
+    $('#container').on('tap','.image',function(e){
+        var id = $(this).index();
+        iNow=id;
+       $('#container').hide();
+        $('#img-box').show().css('background-image','url(img/'+(id+1)+'.jpg');
+        e.preventDefault();
+    });
+    $('#img-box').on('tap',function(e){
+       $('#img-box').hide();
+        $('#container').show();
+        e.preventDefault();
+    });
+    $('#img-box').on('swipeleft',function(){
+        iNow++;
+        if(iNow == $('.image').length){
+            iNow = 0;
+        }
+        $('#img-box').css('background-image','url(img/'+(iNow+1)+'.jpg)');
+    });
+    $('#img-box').on('swiperight',function(){
+        iNow--;
+        if(iNow == -1){
+          iNow = $('.image').length-1;
+        }
+        $('#img-box').css('background-image','url(img/'+(iNow+1)+'.jpg');
+    })
+
+</script>
+</body>
+</html>
