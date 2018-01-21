@@ -54,8 +54,13 @@
         }
         .nav-right p{
             color: #4e4e4e;
-            font-size: 12px;
+            font-size: 16px;
             text-align: center;
+        }
+        .nav-right .nav-word{
+            color: #b89f7a;
+            font-weight: 700;
+            font-size: 14px
         }
         .img-box{
             width: 100%;
@@ -67,6 +72,61 @@
         }
         .img-box .img-640{
             display: none;
+        }
+        .content{
+            width: 1170px;
+            height: 220px;
+            margin: 0 auto;
+        }
+        .rewards{
+            width: 100%;
+            height: 220px;
+            background: #0F0F0F;
+
+
+        }
+        .rewards-mark{
+            width: 260px;
+            height: 220px;
+            float: left;
+           padding-top:70px ;
+            margin-left: 220px;
+            background: url("img/rewards_bg.png") 0 0 no-repeat;
+            -webkit-background-size:contain ;
+
+        }
+        .rewards-mark-label{
+            color: #fff ;
+            font-size: 18px ;
+           margin-bottom: 4px;
+        }
+        .rewards-mark-logo{
+            width: 160px;
+            height: 38.5185185185px;
+            background: url("img/rewards_logo_20170209.svg") 0 0 no-repeat;
+            background-size: contain;
+        }
+        .reward-content{
+            width: 430px;
+            height: 220px;
+            float: right;
+            margin-right: 240px;
+            margin-top: 35px;
+
+        }
+        .rewards-content-title{
+            font-size: 25px;
+            color: #FFFFEE;
+        }
+        .rewards-content-text{
+            font-size: 16px;
+            color: #FFFFff;
+            margin-bottom: 32px;
+        }
+        .reward-content span{
+            color: #FFFFEE;
+            border: 2px solid #a98e67;
+            padding: 14px 40px;
         }
         @media screen and (max-width: 990px) {
             #header {
@@ -112,7 +172,7 @@
     </div>
     <div class="nav-right">
         <p>星享俱乐部</p>
-        <p>登录或注册</p>
+        <p class="nav-word">登录 或注册</p>
     </div>
     <div class="middle-box">
         <div class="middle">
@@ -125,6 +185,30 @@
     <div class="wrapper img-box">
         <a href="#"><img class="img-1920" src="img/kv-image-pc-20171220175727.jpg" alt=""/></a>
         <a href="#"><img class="img-640" src="img/kv-image-mobile-20171220175730.jpg" alt=""/></a>
+    </div>
+</div>
+<div class="rewards">
+    <div class="content">
+        <div class="rewards-mark">
+            <p class="rewards-mark-label">星享卡</p>
+            <div class="rewards-mark-logo"></div>
+        </div>
+        <div class="reward-content">
+            <p class="rewards-content-title">星享俱乐部</p>
+            <p class="rewards-content-text">开启您的星享之旅，星星越多、会员等级越高、好礼越丰富</p>
+            <span class="register">注册</span>
+            <span class="login">登录</span>
+        </div>
+    </div>
+</div>
+<div class="app">
+    <div class="app-container">
+        <div class="app-download">
+
+        </div>
+        <div class="content-info">
+
+        </div>
     </div>
 </div>
 
