@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list id="e32edc35-f9a7-43b6-bbdd-e7c3e6db0890" name="Default" comment="qqq" />
     <list default="true" id="0c791cd8-78e3-4cc7-9310-2dbed4525d2e" name="New changelist" comment="移动端开发  星巴克">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/es6/1_test.html" afterPath="$PROJECT_DIR$/es6/1_test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6/14_promise.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6/15_promise.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6/jquery-1.12.4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6/product-data.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="xiaomi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,11 +60,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/移动端开发/starbucks/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6067538">
+            <state vertical-scroll-proportion="0.0">
               <caret line="360" column="0" selection-start-line="360" selection-start-column="0" selection-end-line="360" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery-1.12.4.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/es6/jquery-1.12.4.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -253,7 +267,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="E:/web/fellows17" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -282,11 +296,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\WebTest\xiaomi\es6" />
       <recent name="E:\WebTest\xiaomi\移动端开发\starbucks\imgs" />
       <recent name="E:\WebTest\xiaomi\移动端开发\jqueryMobile\相册" />
       <recent name="E:\WebTest\xiaomi\移动端开发\jqueryMobile\相册\image" />
       <recent name="E:\WebTest\xiaomi\移动端开发\jqueryMobile" />
-      <recent name="E:\WebTest\xiaomi\移动端开发\jqueryMobile\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\WebTest\xiaomi\移动端开发\starbucks\css" />
@@ -478,7 +492,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1265625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -530,13 +544,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CSS3/2_test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.285714">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CSS3/盒模型.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.011235955">
@@ -865,8 +872,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/移动端开发/starbucks/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6067538">
+        <state vertical-scroll-proportion="0.0">
           <caret line="360" column="0" selection-start-line="360" selection-start-column="0" selection-end-line="360" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/es6/jquery-1.12.4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
