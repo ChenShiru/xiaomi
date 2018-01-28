@@ -3,10 +3,14 @@
   <component name="ChangeListManager">
     <list id="e32edc35-f9a7-43b6-bbdd-e7c3e6db0890" name="Default" comment="qqq" />
     <list default="true" id="0c791cd8-78e3-4cc7-9310-2dbed4525d2e" name="New changelist" comment="移动端开发  星巴克">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6/14_promise.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6/15_promise.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6/jquery-1.12.4.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6/product-data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/webpack.pptx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/webpack_config/entry_webpack.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/dist/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/src/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/postcss.config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/webpack.config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/webpack安装.tx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="xiaomi.iws" />
@@ -70,11 +74,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery-1.12.4.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jquery-1.12.4.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/es6/jquery-1.12.4.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webpack/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.17429194">
+              <caret line="5" column="26" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -228,8 +242,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -244,26 +256,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="xiaomi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xiaomi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xiaomi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="es6" />
+              <option name="myItemId" value="webTest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -296,11 +296,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\WebTest\webTest\webTest" />
       <recent name="E:\WebTest\xiaomi\es6" />
       <recent name="E:\WebTest\xiaomi\移动端开发\starbucks\imgs" />
       <recent name="E:\WebTest\xiaomi\移动端开发\jqueryMobile\相册" />
       <recent name="E:\WebTest\xiaomi\移动端开发\jqueryMobile\相册\image" />
-      <recent name="E:\WebTest\xiaomi\移动端开发\jqueryMobile" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\WebTest\xiaomi\移动端开发\starbucks\css" />
@@ -492,7 +492,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1265625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -544,13 +544,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CSS3/盒模型.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.011235955">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CSS3/1_test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.39325842">
@@ -882,6 +875,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17429194">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="26" />
           <folding />
         </state>
       </provider>
