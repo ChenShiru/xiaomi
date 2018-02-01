@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+        .aa{
+            background: #ff0000;
+        }
+        .bb{
+            color: #00ff00;
+        }
+
+
+
+</style>
+<body>
+    <div id="app">
+        <div :class="[isAa,isBb]">aaaaaaa</div><!-- div后一定要有空格 -->
+    </div>
+    <script src="vue.js"></script>
+    <script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            isAa:'aa',
+            isBb:'bb'
+        }
+    })
+    
+    
+    
+    </script>
+</body>
+</html>

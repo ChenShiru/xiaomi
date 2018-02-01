@@ -3,14 +3,25 @@
   <component name="ChangeListManager">
     <list id="e32edc35-f9a7-43b6-bbdd-e7c3e6db0890" name="Default" comment="qqq" />
     <list default="true" id="0c791cd8-78e3-4cc7-9310-2dbed4525d2e" name="New changelist" comment="移动端开发  星巴克">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/webpack.pptx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/webpack_config/entry_webpack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/dist/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/src/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/postcss.config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/webpack.config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/webpack安装.tx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/10_template.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/11_component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/12_dialog.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/13_dialog2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/14_directive.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/15_vue.set.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/16_v-if.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/17_v-model.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/18_test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/1_test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/2_defineProperty.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/3_v-for.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/4_v-on.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/5_v-bind.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/6_.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/7_test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/8_add.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/9_computed.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/vue.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="xiaomi.iws" />
@@ -87,8 +98,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webpack/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17429194">
-              <caret line="5" column="26" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.10348584">
+              <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -215,7 +226,6 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -256,7 +266,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webTest" />
+              <option name="myItemId" value="xiaomi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xiaomi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xiaomi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -492,7 +516,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-8" y="0" width="1936" height="1056" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1265625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -881,8 +905,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webpack/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17429194">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.10348584">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
           <folding />
         </state>
       </provider>

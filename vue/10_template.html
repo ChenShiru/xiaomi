@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+       <!--  template不是有效标签 ,即使v-show="msg==1"不存在也会显示 -->
+       <template v-show="msg == 1">
+           <h2>1111</h2>
+           <p>1111</p>
+       </template>
+        <template v-for="val in arr">
+            <h2>{{val}}</h2>
+            <p>{{val}}</p>
+        </template>
+    </div>
+</body>
+<script src="vue.js"></script>
+<script>
+var vm = new Vue({
+    el:"#app",
+    data:{
+        arr:['a','b','c'],
+        msg:3
+    }
+});
+
+</script>
+</html>

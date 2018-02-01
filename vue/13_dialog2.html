@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .dialog-box{
+        width: 200px;
+        height: 200px;
+        background: red;
+    }
+    .dialog-box{
+            width: 400px;
+            height: 300px;
+            background: #cccccc;
+            position: absolute;
+            left:50%;
+            transform: translateX(-50%)  translateY(-50%);
+            top:50%;
+        }
+        .title{
+            height: 50px;
+            line-height: 50px;
+            border-bottom: 1px solid #000;
+            padding: 0 15px;
+        }
+        .title span{
+            float: right;
+        }
+        .content{
+            padding: 20px;
+        }
+</style>
+<body>
+    <div id="app">
+        <button @click="loginShow=true">登录</button>
+        <button @click="regShow=true">注册</button>
+        <mydialog v-show="loginShow" title="登录" @close="fn">
+                
+                <div slot="content">
+                    用户名：<input type="text"/><br>
+                    密码：<input type="password"/><br>
+                    <button>登录</button>
+                </div>
+        </mydialog>
+        <mydialog v-show="regShow" title="注册" @close="fn">
+            <div slot="content">
+                    用户名：<input type="text"/><br>
+                    密码：<input type="password"/><br>
+                    确认密码：<input type="password"></br>
+                    <button>注册</button>
+            </div>
+
+        </mydialog>
+    </div>
+    <script src="vue.js"></script>
+    <script type="text/x-template" id="dialog">
+        <div class="dialog-box">
+            <div class="title">
+                    {{title}}
+                <span @click="$emit('close')">x</span><!-- //子组件调用不了父组件的数据，用$emit() -->
+            </div>
+            <div class="content">
+                <slot name="content"></slot>
+            </div>
+
+        </div>
+    
+    
+    
+    </script>
+    <script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            loginShow:false,
+            regShow:false
+        },
+        components:{
+            mydialog:{
+                template:'#dialog',
+                props:['title']
+            }
+        },
+        methods:{
+            fn:function(){
+                this.loginShow=false;
+                this.regShow=false
+            }
+        }
+    })
+    </script>
+</body>
+</html>
