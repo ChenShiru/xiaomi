@@ -1,15 +1,31 @@
 <template>
   <div id="app">
+    <button @click="goBack()">上一页</button>
+    <button @click="goNext()">下一页</button>
+    <button @click="goHome()">首页</button>
     <img src="./assets/logo.png"><br>
     <router-link to="/">首页</router-link>
     <router-link to="/test/">test1</router-link>
+    <!-- <transition name="xx" mode="out in"> -->
     <router-view/>
+   <!--  </transition> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  methods:{
+    goBack(){
+      this.$router.go(-1);
+    },
+    goNext(){
+      this.$router.go(1);
+    },
+    goHome(){
+      this.$router.push('/');
+    }
+  }
 }
 </script>
 
@@ -22,4 +38,16 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+/* .xx-enter{
+  opacity: 0;
+}
+.xx-leave{
+  opacity: 1;
+}
+.xx-enter-active{
+  transition: opacity 1s;
+}
+.xx-leave-active{
+  transition:opacity 1s;
+} */
 </style>

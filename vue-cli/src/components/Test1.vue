@@ -4,6 +4,10 @@
         <router-link to="/subTest1/">subTest1</router-link>
         <!-- <router-link :to="{name:'subTest2',params:{id:2,name:'xx'}}">subTest2</router-link> -->
         <router-link to="/subTest2/5/lisi">subTest2</router-link>
+        <router-link to="/home">redicect</router-link>
+        <router-link to="/redirect/6/lisi">redirectparams</router-link>
+        <router-link to="/abc">abc</router-link>
+        <router-link to="/xyz">error</router-link>
         <router-view></router-view>
     </div>
 </template>

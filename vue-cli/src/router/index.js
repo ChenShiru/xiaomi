@@ -4,15 +4,31 @@ import HelloWorld from '@/components/HelloWorld'
 import Test1 from '@/components/Test1'
 import subTest1 from '@/components/subTest1'
 import subTest2 from '@/components/subTest2'
+import Count from '@/components/Count'
+import error from '@/components/Error'
+import Home from '@/components/Home'
 
 Vue.use(Router)
 
 export default new Router({
+  mode:'history',
   routes: [
     {
       path: '/',
       name: 'HelloWorld',
-      component: HelloWorld
+      component: HelloWorld,
+      beforeEnter(to,from,next){
+        console.log(to,from);
+        next();
+      }
+    },
+    {
+      path:'/homecom',
+      component:Home
+    },
+    {
+      path:'/count',
+      component:Count
     },
     {
       path:'/test/',
@@ -23,9 +39,23 @@ export default new Router({
         component:subTest1
       },
       {
-        path:'/subTest2/:id/:name',
+        path:'/subTest2/:id(\\d+)/:name',
         name:'subTest2',
         component:subTest2
+      },
+      {
+        path:'/home/',
+        redirect:'/'
+      },{
+        path:'/redirect/:id(\\d+)/:name',
+        redirect:'/subTest2/:id(\\d+)/:name'
+      },
+      {
+        path:'/home/',
+        alias:'/abc'
+      },{
+        path:'/*',
+        component:error
       }
       ]
     }
