@@ -30,7 +30,7 @@
 
 .slide1 {
   /* background-color: #0089dc; */
-  background: url('https://img3.doubanio.com/lpic/s6989253.jpg') center center no-repeat ;
+ background: url('https://img3.doubanio.com/lpic/s6989253.jpg') center center no-repeat ;
    background-size: contain; 
    
 }

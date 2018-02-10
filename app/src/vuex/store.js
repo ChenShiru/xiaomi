@@ -3,7 +3,8 @@ import Vuex from 'vuex'
 Vue.use(Vuex);
 const state = {
     bgcolor:'red',
-    title:''
+    title:'',
+    photoData:[]
 }
 const mutations ={
     change(state,bgcolor){  //只能传一个 参数
@@ -11,8 +12,9 @@ const mutations ={
     },
     changeTitle(state,title){
         state.title = title;
+    }  
     }
-}
+
 export default new Vuex.Store({
     state,
     mutations
