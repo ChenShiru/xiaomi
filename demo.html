@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var str =  "0029029070999991901010106004+64333+023450FM-12+000599999V0202701N015919999999N0000001N9-00781+99999102001ADDGF108991999999999999999999";
+    var year = str.substring(15,19);
+    var month = parseInt(str.substring(19,21));
+    var day =parseInt( str.substring(21,23));
+    var data = parseInt(str.substring(87,92));
+    document.write(data);
+    var fso = new ActiveXObject("Scripting.FileSystemObject");
+    var f1 = fso.getFile("E:\\1901.txt");
+    document.write(f1 );
+
+
+
+</script>
+</body>
+</html>

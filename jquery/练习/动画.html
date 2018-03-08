@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1{
+            height: 200px;
+            width: 200px;
+            background: #ff0000;
+        }
+    </style>
+</head>
+<body>
+<button id="btn1">hide</button>
+<button id="btn2">show</button>
+<div id="div1">
+
+</div>
+<ul>
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+</ul>
+<ul>
+    <li>004</li>
+    <li class="bb">005</li>
+    <li>006</li>
+</ul>
+<script src="../jquery-1.12.4.js"></script>
+<script>
+    /*$('#btn1').on('click',function(){
+        $('#div1').hide();
+    });*/
+   /* $('#btn2').on('click',function(){
+        $('#div1').toggle(3000);
+    })*/
+   /* $('#btn2').on('click',function(){
+        $('#div1').animate({
+            width:'+=100',
+            height:400
+        },1000,function(){
+            console.log(222)
+        }).animate({
+            opacity:0.5
+        })
+    })*/
+    console.log($('.bb').index());
+</script>
+</body>
+</html>

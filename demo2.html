@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+var fso, f1, ts, s;
+ var ForReading = 1;
+fso = new ActiveXObject("Scripting.FileSystemObject");
+// 创建文件
+f1 = fso.CreateTextFile("E:\\testfile.txt", true);
+ // 填写一行数据
+f1.WriteLine("我是深情小建");
+f1.WriteBlankLines(1);
+ // 关闭文件
+f1.Close();
+ // 打开文件
+ ts = fso.OpenTextFile("E:\\testfile.txt", ForReading);
+ // 读取文件一行内容到字符串
+ s = ts.ReadLine();
+ // 显示字符串信息
+ alert("文件信息是： ‘" + s + "‘");
+ // 关闭文件
+ ts.Close();
+</script>
+</body>
+</html>
