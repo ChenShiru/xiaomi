@@ -109,7 +109,7 @@
     $(this).addClass('selected').siblings().removeClass('selected');
      $skin=$(this).attr('id');
     $('#content').attr('class',$skin);
-        $.cookie('mySkin',$skin,{expires:7});
+        $.cookie('mySkin',$skin,{expires:10});
 });
     $('#'+$skin).trigger('click');
 </script>

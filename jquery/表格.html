@@ -36,10 +36,29 @@
 </body>
 <script src="jquery-1.12.4.js"></script>
 <script>
-$('tbody tr:even').addClass('even');
+/*$('tbody tr:even').addClass('even');
     $('tbody tr').on('click',function(){
         $(this).toggleClass('selected');
         $(this).find(':checkbox').prop('checked',$(this).hasClass('selected'))
+    })*/
+   /* $('tbody tr:even').addClass('even');
+    $('tbody tr').on('click',function(e){
+        if(e.target == $(this).find(':checkbox')[0]){
+            e.target.checked = !e.target.checked;
+        }
+        if($(this).find(':checkbox').prop('checked')){
+            $(this).removeClass('selected').find(':checkbox').prop('checked',false);
+        }else{
+            $(this).addClass('selected').find(':checkbox').prop('checked',true);
+        }
+    })*/
+    $('tbody tr:even').addClass('even');
+    $('tbody tr').on('click',function(){
+        if($(this).hasClass('selected')){
+            $(this).removeClass('selected').find(':checkbox').prop('checked',false);
+        }else{
+            $(this).addClass('selected').find(':checkbox').prop('checked',true);
+        }
     })
 </script>
 </html>

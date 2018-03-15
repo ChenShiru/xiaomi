@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #set1{
+            width: 204px;
+        }
+    </style>
+</head>
+<body>
+<h1>HTML基础-注册表单</h1>
+<hr/>
+<center>
+<form action="" method="post">
+    <table>
+        <tr>
+            <td align="right">
+                登陆名称:
+            </td>
+            <td>
+                <input type="text" id="name" name="username" style="width: 200px"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                登陆密码:
+            </td>
+            <td>
+                <input type="password" id="psd1" name="password1" style="width: 200px"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                确认密码:
+            </td>
+            <td>
+                <input type="password" id="psd2" name="password2" style="width: 200px"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                密码保护问题:
+            </td>
+            <td >
+                <select id="set1">
+                    <option value="你的身份证号后6位是什么">你的身份证号后6位是什么</option>
+                    <option value="你的手机号码">你的手机号码</option>
+                    <option value="你的班级">你的班级</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                问题答案:
+            </td>
+            <td >
+            <input type="text" name="answer" style="width: 200px"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                性别:
+            </td>
+            <td ><input type="radio"/>男<input type="radio"/>女</td>
+        </tr>
+        <tr align="center">
+            <td colspan="2">
+            <input type="submit" name="sub" value="注册" onclick="return check();"/><input type="reset" name="res" value="重置"/>
+            </td>
+        </tr>
+    </table>
+    <hr/>
+
+</form>
+</center>
+<script>
+    function check(){
+
+    }
+</script>
+</body>
+</html>
