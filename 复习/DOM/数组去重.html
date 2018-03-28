@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var ary=[11,2,2,6,6,78,37,33,21];
+    function deleteRepeat(ary){
+        var obj = {};
+        for(var i = 0 ;i<ary.length;i++){
+         var temp = ary[i];
+            if(obj[temp]==ary[i] && temp!=undefined){
+                ary.splice(i,1);
+                i--;
+                continue
+            }
+            obj[temp] = temp;
+        }
+        obj = null;
+        return ary;
+    }
+    var newAry = deleteRepeat(ary);
+    console.log(newAry);
+</script>
+</body>
+</html>

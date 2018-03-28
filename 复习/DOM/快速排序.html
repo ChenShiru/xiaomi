@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var ary=[11,2,31,45,6,78,37,33,21];
+    function quickSort(ary){
+        var len = ary.length;
+        if(len<=1){
+            return ary;
+        }
+        var midIndex = Math.floor(len/2);
+        var spiot = ary.splice(midIndex,1);
+        var left = [];
+        var right = [];
+        for(var i = 0;i<ary.length;i++){
+                if(ary[i]>spiot){
+                    right.push(ary[i]);
+                }else{
+                    left.push(ary[i])
+                }
+        }
+        return quickSort(left).concat(spiot,quickSort(right));
+    }
+    var newAry = quickSort(ary);
+    console.log(newAry);
+</script>
+</body>
+</html>

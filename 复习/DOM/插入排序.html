@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var ary=[11,2,31,45,6,78,37,33,21];
+    function insertsort(ary){
+        var temp;
+        for(var i=1;i<ary.length;i++){
+                if(ary[i]<ary[i-1]){
+                    temp = ary[i];
+                    var preIndex = i-1;
+                }
+            while(temp<ary[preIndex] && preIndex>=0){
+                ary[preIndex+1] = ary[preIndex];
+                ary[preIndex] = temp;
+                preIndex--;
+            }
+        }
+        return ary;
+    }
+    var newary = insertsort(ary);
+    console.log(newary);
+</script>
+</body>
+</html>
