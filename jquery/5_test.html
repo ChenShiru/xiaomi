@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="text"/>
+<button id="btn">修改</button>
+<input type="button" name="close" value="关闭" onclick="window.close();" />
+<button id="btn1">确认</button>
+<script src="jquery-1.12.4.js"></script>
+<!--<script>
+$('#btn').on('click',function(){
+    $("input").attr("disabled",true);
+
+});
+    $('#btn1').on('click',function(){
+        $("input").attr("disabled",false);
+    })-->
+    <script language="javascript">
+// 这个脚本是 ie6和ie7 通用的脚本
+        function custom_close(){
+            if(confirm("您确定要关闭本页吗？")){
+                window.opener=null;
+                window.open('','_self');
+                window.close();
+            }
+            else{
+            }
+        }
+</script>
+<input id="btnClose" type="button" value="关闭本页" onClick="custom_close()" />
+
+</body>
+</html>

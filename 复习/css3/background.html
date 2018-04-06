@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    p{
+        border: 10px dashed  #666;
+        width: 200px;
+        height: 200px;
+        padding: 50px;
+        background: red url("bg.jpg") no-repeat;
+    }
+        .border-box p{
+            background-origin: border-box;
+        }
+        .padding-box p{
+            background-origin: padding-box;
+        }
+        .content-box p{
+            background-origin: content-box;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li class="border-box">
+       <h1>border-box</h1>
+        <p>从border区域（含border）开始显示背景图像</p>
+    </li>
+    <li class="padding-box">
+        <h1>padding-box</h1>
+        <p>从padding区域（含padding)开始显示背景图像</p>
+    </li>
+    <li class="content-box">
+        <h1>content-box</h1>
+        <p>从content区域开始显示背景图像</p>
+    </li>
+</ul>
+</body>
+</html>

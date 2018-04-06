@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: red;
+            /*transition: width 2s ease-out 2s;*/
+            -webkit-animation: run 2s ease-out 1s;
+        }
+        @keyframes run {
+            50%{
+                width: 500px;
+            }
+            100%{
+                width: 100px;
+            }
+        }
+        /*#div1:hover{
+            width: 500px;
+        }*/
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>
