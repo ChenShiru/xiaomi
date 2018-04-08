@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+   // 数组过滤
+   var book={ "title":"book title", authors:[ "one", "two", "three" ], edition:2, year:2016 }; var JSONStr=JSON.stringify(book,["title","year","other"]); console.log(JSONStr);//{"title":"book title","year":2016} console.log(typeof JSONStr);//string
+   //函数过滤
+
+   var book={ "title":"book title", authors:[ "one", "two", "three" ], edition:2, year:2016 }; var JSONStr=JSON.stringify(book,function(key,value){ switch (key){ case "authors": return value.join("+++++");//如果键为 "authors" ，就将数组连接为一个字符串； case "year": return 5000+"change";//如果键为 "year" ，则将其值设置为 5000change ； case "edition": return undefined;//如果键为 "edition" ，通过返回 undefined 删除该属性 default : return value;//最后，一定要提供 default 项，此时返回传入的值，以便其他值都能正常出现在结果中。 } }); console.log(JSONStr);//{"title":"book title","authors":"one+++++two+++++three","year":"5000change"} console.log(typeof JSONStr);//string
+</script>
+</body>
+</html>
