@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h3>Try scrolling in the 2 boxes...</h3>
+<div>
+    <div class="wrapper normal">
+        <div class="desc">Normal scroll</div>
+        <div class="content">
+            <div class="inner"></div>
+        </div>
+        <span class="count">0</span>
+    </div>
+    <div class="wrapper throttled">
+        <div class="desc">Throttled scroll</div>
+        <div class="content">
+            <div class="inner"></div>
+        </div>
+        <span class="count">0</span>
+    </div>
+    <script>
+        var normalCount = 0;
+        var throttledCount = 0;
+
+        $('.normal .content').on('scroll', function(e) {
+            $('.normal .count').text(++normalCount)
+        });
+
+
+        $('.throttled .content').on('scroll', throttle(function(e) {
+            $('.throttled .count').text(++throttledCount)
+        }, 250));
+
+        $(document).on('mouseleave', function(e) {
+            normalCount = 0;
+            throttledCount = 0;
+            $('.count').text(0)
+        });
+
+
+        function throttle(fn, threshhold) {
+            var last;
+            var timer;
+            threshhold || (threshhold = 250);
+
+            return function () {
+                var context = this;
+                var args = arguments;
+
+                var now = +new Date();
+
+                if (last && now < last + threshhold) {
+                    clearTimeout(timer);
+                    timer = setTimeout(function () {
+                        last = now;
+                        fn.apply(context, args)
+                    }, threshhold)
+                } else {
+                    last = now;
+                    fn.apply(context, args)
+                }
+            }
+        }
+
+    </script>
+</div>
+</body>
+</html>

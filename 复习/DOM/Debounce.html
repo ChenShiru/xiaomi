@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #000000;
+            color: #FFffff;
+            font-size: 18px;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+
+    </div>
+    <script>
+        var count = 0;
+        var oDiv = document.getElementById('div1');
+        function callback(){
+            count++;
+            this.innerText =count;
+        }
+      oDiv.onmousemove = de(callback);
+        function de(cb){
+            var timer;
+            return function(){
+                clearTimeout(timer);
+                var that = this;
+                timer = setTimeout(function(){
+                        cb.call(that);
+                },1000)
+            }
+        }
+    </script>
+</body>
+</html>
