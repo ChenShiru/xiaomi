@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+/*function createTshirt(name, size, color){
+var o = new Object();
+o.name = name;
+o.size = size;
+o.color = color;
+o.sayName = function(){
+console.log("这件T恤:" + this.name + "," + this.size + "," + this.color +",自带撩妹效果！");
+};
+return o;
+}
+var tShirt1 = createTshirt("tShirt1", "xl", "红");
+var tShirt2 = createTshirt("tShirt2", "xxxl", "黑");
+var tShirt3 = createTshirt("tShirt3", "xxxl", "黑");
+var tShirt4 = createTshirt("tShirt4", "xxxl", "黑");*/
+/*function sum(num) {
+    if (typeof num === "undefined") {
+        console.log("您没有传参啊，请仔细检查");
+        return;
+    }
+    console.log(num);
+}
+sum(100);
+sum();*/
+
+
+
+    /*function Person(name,age){
+ this.name = name;
+ this.age = age;
+ this.say = function(){
+ console.log(this.name+".........");
+ };
+
+ }
+ var p1 = new Person('zs',19);
+ var p2 = new Person('ls',20);
+ console.log(p1);
+ console.log(p1.name);*/
+
+
+/*function Person(){
+}
+Person.prototype = {
+    constructor : Person,
+    name : "Person prototype",
+    age : 29,
+    job: "WEB",
+    sayName : function () {
+        console.log(this.name);
+    }
+};
+var person1=new Person;
+var person2=new Person;
+
+person1.age+=2;
+person1.sayName=null;
+
+console.log(person1.age,person1.sayName);
+console.log(person2.age,person2.sayName);*/
+
+
+
+
+function CreateJsPerson(name, age) {
+    this.name = name;
+    this.age = age;
+    this.like =["one","two"];
+}
+CreateJsPerson.prototype = {
+    constructor:CreateJsPerson,
+    writeJs:function(){
+        console.log("my name is " + this.name + ",i can write js 啦!!");
+    }
+};
+var p1 = new CreateJsPerson("zhu1", 18);
+var p2 = new CreateJsPerson("zhu2", 28);
+p1.writeJs();//->my name is zhu1,i can write js 啦!!
+p2.writeJs();//->my name is zhu2,i can write js 啦!!
+p1.like.push("p1-like");
+console.log(p1.like);//["one", "two", "p1-like"]
+console.log(p2.like);//["one", "two"]
+console.log(p1.writeJs === p2.writeJs);//->true
+console.log(p1.like === p2.like);//->false
+
+
+
+
+
+var num = 0;
+function Fn(num) {
+    arguments[0] = 100;
+    this.num = 200;
+    console.log(num);//100
+    console.log(this.num);//200
+    return num;
+}
+
+Fn.num = 400;
+Fn.prototype.num = 300;
+Fn.prototype.getNum = function () {
+    console.log(this.num);
+};
+
+var f = new Fn(num);
+console.log(f.num);//200
+f.getNum();//200,
+Fn.prototype.getNum();//300
+console.log(num);//0
+
+var n = Fn(num);
+console.log(n);//100,200,100
+console.log(num);//200
+</script>
+</body>
+</html>
