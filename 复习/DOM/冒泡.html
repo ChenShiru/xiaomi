@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1{
+            width: 400px;
+            height: 400px;
+            background: #ff0000;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: #00ff00;
+        }
+        #div3{
+            width: 100px;
+            height: 100px;
+            background: #7d7060;
+        }
+
+    </style>
+</head>
+<body>
+<div id="div1">
+    <div id="div2">
+        <div id="div3"></div>
+    </div>
+</div>
+<script>
+    var oDiv1 = document.getElementById('div1');
+    /*var oDiv2 = document.getElementById('div2');
+    var oDiv3 = document.getElementById('div3');
+    oDiv1.addEventListener('click',function(){
+        alert(1);
+    },true);
+    oDiv2.addEventListener('click',function(){
+        alert(2);
+    },true);
+    oDiv3.addEventListener('click',function(){
+        alert(3);
+    },true)*!/*/
+    function fn(){
+            alert(1111);
+    }
+    function fn2(){
+        alert(2222);
+    }
+   addEvent(oDiv1,"click",fn);
+    addEvent(oDiv1,"click",fn2);
+    function addEvent(elem,type,handle){
+        if(elem.addEventListener){
+            elem.addEventListener(type,handle);
+        }else if(elem.attachEvent){
+            elem[type+handle] = function(){
+                handle.call(elem);
+            };
+            elem.attachEvent("on"+type,elem[type+handle]);
+        }else{
+            elem["on"+type] =handle;
+        }
+    }
+    function removeEvent(elem,type,handler){
+        if(elem.removeEventListener){
+            elem.removeEventListener(type,handler);
+        }else if(elem.detachEvent){
+            elem.detachEvent("on"+type,elem[type+handler]);
+        }else{
+            elem["on"+type] = null;
+        }
+    }
+
+// call apply bind 区别
+/*function fn(arg1,arg2){
+    console.log(this);
+    console.log(arg1);
+    console.log(arg2);
+}
+    var obj = {
+        name:"zhangsan",
+        age:20
+    }
+    fn.call(obj,"123","456");
+    fn.apply(obj,["123","456"]);
+    fn.bind(obj,"123","456")();*/
+
+</script>
+</body>
+</html>

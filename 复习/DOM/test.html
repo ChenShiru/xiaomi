@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<ul id="tab">
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+    <li>004</li>
+</ul>
+<button id="add">添加</button>
+<script>
+
+    var oUl = document.getElementById('tab');
+    var aLi = document.getElementsByTagName('li');
+   /* for(var i = 0;i<aLi.length;i++){
+            (function(index){
+                aLi[index].onclick = function(){
+                    console.log(index);
+                };
+            })(i);
+    }*/
+    oUl.onclick = function(e){
+        var target = e.target || window.event.srcElement;
+        console.log(target.innerHTML);
+    }
+    var oBtn = document.getElementById('add');
+    oBtn.onclick = function(){
+        var oLi = document.createElement('li');
+        oLi.innerHTML = Math.random();
+        oUl.appendChild(oLi);
+    }
+</script>
+</body>
+</html>

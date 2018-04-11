@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <script>
+        /*获取样式*/
+        var oDiv = document.getElementById('div1');
+        alert(getComputedStyle(oDiv,null).width);//标准浏览器
+        alert(oDiv.currentStyle.width);//ie浏览器
+        console.log(oDiv.offsetWidth);
+    </script>
+</body>
+</html>

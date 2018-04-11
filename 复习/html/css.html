@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            overflow: hidden;
+        }
+        #div2{
+            width: 100px;
+            height: 100px;
+            background: #00ff00;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="div1">
+    <div id="div2"></div>
+</div>
+<!--
+css选择器：
+1 ，id选择器 #id{}
+2， class选择器 .class{}
+3. 标签选择器   div{}  h1{}
+4. 后代选择器   #div h1{}
+5. 子代选择器  #div > p{} 亲子代 有兼容性问题
+6. 多类选择器  #div1.aa{}
+7. 分组选择器 div,h1{}
+8. 伪类选择器 a:hover{color:#ff00ff} 真实存在的
+9.伪对象 ::after{content:""} ::before{} //不一定真实存在
+10.属性选择器 Input[name=username]{}
+11 .兄弟选择器  +（相邻）  ~
+12.css3选择器
+
+盒模型  ：两种   外边距合并问题2个
+定位： position:static relative absolute fixed( 有兼容性问题)
+var iScrollTop = document.body.scrollTop || document.documentElement.scrollTop
+浮动 float:left/right
+clear:both
+-->
+</body>
+</html>
