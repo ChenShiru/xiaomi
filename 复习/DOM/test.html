@@ -16,15 +16,15 @@
 
     var oUl = document.getElementById('tab');
     var aLi = document.getElementsByTagName('li');
-   /* for(var i = 0;i<aLi.length;i++){
+    for(var i = 0;i<aLi.length;i++){
             (function(index){
-                aLi[index].onclick = function(){
+                aLi[i].onclick = function(){
                     console.log(index);
-                };
+                };i
             })(i);
-    }*/
-    oUl.onclick = function(e){
-        var target = e.target || window.event.srcElement;
+    }
+    /*oUl.onclick = function(e){
+        var target = e.target || window.event.srcElement;i
         console.log(target.innerHTML);
     }
     var oBtn = document.getElementById('add');
@@ -32,7 +32,7 @@
         var oLi = document.createElement('li');
         oLi.innerHTML = Math.random();
         oUl.appendChild(oLi);
-    }
+    }*/
 </script>
 </body>
 </html>

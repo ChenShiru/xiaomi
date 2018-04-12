@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="div1" class="aa bb"></div>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script>
+    var oDiv = document.querySelector("#div1");
+    var aLi = document.querySelectorAll('li');
+    //oDiv.classList.add('dd');
+    oDiv.classList.remove('aa');
+    oDiv.classList.toggle('dd');
+    console.log(aLi);
+    console.log(oDiv);
+</script>
+</body>
+</html>
