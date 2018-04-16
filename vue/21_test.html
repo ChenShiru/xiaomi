@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style lang="">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #app{
+            width: 300px;
+            margin: 0 auto;
+        }
+        #app li{
+        width: 300px;
+        height: 100px;
+        background:#00ff00; 
+        margin-top: 10px;
+         }
+         #app li.bg{
+        background: #ff0000;
+    }
+        h1{
+            width: 300px;
+            text-align: center;
+        }
+        li span{
+               float: right; 
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>sever</h1>
+        <ul>
+            <li v-for="obj in arr" @click="fn(obj)" :class="{bg:obj.isBg}">
+                {{obj.name}}<span>{{obj.price}}</span>
+           </li>
+        </ul>
+        <div>
+                <span>total</span>
+                <span>{{num}}</span>
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            arr:[
+                {name:"aa",price:123,isBg:false},
+                {name:"bb",price:12,isBg:false}, 
+                {name:"cc",price:45,isBg:false},
+                {name:"dd",price:65,isBg:false},
+                {name:"ee",price:78,isBg:false},
+                {name:"gg",price:90,isBg:false}
+            ],
+            num:0
+        },
+        methods:{
+                fn:function(o){
+                      o.isBg = !o.isBg;
+                    if(o.isBg){
+                        this.num+=o.price;
+                    }else{
+                      this.num -=o.price;
+              }
+                }
+            }   
+    })
+    </script>
+</body>
+</html>

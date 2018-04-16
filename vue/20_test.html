@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style lang="">
+    .aa{
+        background: red
+    }
+    .bb{
+        color: green
+    }
+</style>
+<body>
+    <div id="app">
+        <!-- <p :class="{aa:isBa,bb:isBb}">fsdfsddsdfs</p> -->
+        <p :class="[isAa,isBb]">fdsfsdfdssdfd</p>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            isAa:'aa',
+            isBb:''
+        }
+    })
+    
+    </script>
+</body>
+</html>
