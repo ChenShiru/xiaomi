@@ -5,6 +5,7 @@ import Test1 from '@/components/Test1'
 import subTest1 from '@/components/subTest1'
 import subTest2 from '@/components/subTest2'
 import Count from '@/components/Count'
+import Count2 from '@/components/Count2'
 import error from '@/components/Error'
 import Home from '@/components/Home'
 
@@ -29,6 +30,10 @@ export default new Router({
     {
       path:'/count',
       component:Count
+    },
+    {
+      path:'/count2',
+      component:Count2
     },
     {
       path:'/test/',
